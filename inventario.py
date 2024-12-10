@@ -16,3 +16,12 @@ class Inventario:
         producto = ProductoAlimenticio(nombre, precio, cantidad)
         self.productos.append(producto)
         print(f"Producto {nombre} agregado correctamente.")
+
+    def listar_productos(self):
+        # Mostrar todos los productos en el inventario
+        if not self.productos:
+            print("No hay productos en el inventario.")
+        else:
+            print("Productos en el inventario:")
+            for producto in self.productos:
+                print(producto)    
