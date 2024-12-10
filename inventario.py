@@ -39,3 +39,12 @@ class Inventario:
                 print(f"Producto {nombre} editado correctamente.")
                 return
         print(f"Producto {nombre} no encontrado.")    
+
+    def eliminar_producto(self, nombre):
+        # Eliminar un producto del inventario
+        for i, producto in enumerate(self.productos):
+            if producto.nombre == nombre:
+                del self.productos[i]
+                print(f"Producto {nombre} eliminado correctamente.")
+                return
+        print(f"Producto {nombre} no encontrado.")
